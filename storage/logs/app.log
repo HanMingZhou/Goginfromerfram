@@ -1,1 +1,12 @@
 [2023-12-11 16:04:39.192]	local.info	GoGinformerfram/main.go:17	log init success
+[2024-02-02 20:52:43.339]	local.info	Goginfromerfram/main.go:17	log init success
+[2024-02-02 22:17:52.192]	local.info	Goginfromerfram/main.go:19	log init success
+[2024-02-02 22:34:16.034]	local.info	Goginfromerfram/main.go:19	log init success
+[2024-02-02 22:34:16.086]	local.error	bootstrap/db.go:54	mysql connect failed, err:	{"err:": "Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)"}
+[2024-02-02 22:35:14.493]	local.info	Goginfromerfram/main.go:19	log init success
+[2024-02-02 22:35:14.532]	local.error	bootstrap/db.go:54	mysql connect failed, err:	{"err:": "Error 1045 (28000): Access denied for user '123'@'localhost' (using password: YES)"}
+[2024-02-02 22:39:26.403]	local.info	Goginfromerfram/main.go:19	log init success
+[2024-02-02 22:39:26.441]	local.error	bootstrap/db.go:54	mysql connect failed, err:	{"err:": "Error 1049 (42000): Unknown database 'go-test'"}
+[2024-02-02 22:40:33.461]	local.info	Goginfromerfram/main.go:19	log init success
+[2024-02-03 14:25:05.161]	local.info	Goginfromerfram/main.go:16	log init success
+[2024-02-03 14:36:00.323]	local.info	Goginfromerfram/main.go:16	log init success

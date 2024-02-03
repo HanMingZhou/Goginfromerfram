@@ -1,0 +1,99 @@
+
+2024/02/02 22:34:16 H:/GoProjects/Goginfromerfram/bootstrap/db.go:50
+[error] failed to initialize database, got error Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+2024/02/02 22:35:14 H:/GoProjects/Goginfromerfram/bootstrap/db.go:50
+[error] failed to initialize database, got error Error 1045 (28000): Access denied for user '123'@'localhost' (using password: YES)
+
+2024/02/02 22:39:26 H:/GoProjects/Goginfromerfram/bootstrap/db.go:50
+[error] failed to initialize database, got error Error 1049 (42000): Unknown database 'go-test'
+
+2024/02/02 22:40:33 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.514ms] [rows:-] SELECT DATABASE()
+
+2024/02/02 22:40:33 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[2.541ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/02 22:40:33 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.981ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go-test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2024/02/02 22:40:33 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[87.274ms] [rows:0] CREATE TABLE `users` (`id` bigint AUTO_INCREMENT,`name` varchar(191) NOT NULL COMMENT '用户名称',`mobile` varchar(191) NOT NULL COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`created_at` datetime NULL,`updated_at` datetime NULL,`deleted_at` datetime NULL,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_deleted_at` (`deleted_at`))
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.510ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.354ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.799ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go-test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.757ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.503ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.208ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go-test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.837ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.846ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go-test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.086ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.825ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:25:05 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.694ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go-test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.539ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.754ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go-test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.813ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.066ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.675ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go-test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.075ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.116ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go-test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.600ms] [rows:-] SELECT DATABASE()
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[0.551ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go-test%' ORDER BY SCHEMA_NAME='go-test' DESC,SCHEMA_NAME limit 1
+
+2024/02/03 14:36:00 H:/GoProjects/Goginfromerfram/bootstrap/db.go:67
+[1.106ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go-test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
